@@ -23,7 +23,7 @@ end
 #   puts "-----------"
 #   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 # end
-# 
+#
 # def input_to_index(user_input)
 #   user_input.to_i - 1
 # end
@@ -31,15 +31,15 @@ end
 # def move(board, index, current_player)
 #   board[index] = current_player
 # end
-# 
+#
 # def position_taken?(board, location)
 #   board[location] != " " && board[location] != ""
 # end
-# 
+#
 # def valid_move?(board, index)
 #   index.between?(0,8) && !position_taken?(board, index)
 # end
-# 
+#
 # def turn(board)
 #   puts "Please enter 1-9:"
 #   input = gets.strip
@@ -51,7 +51,7 @@ end
 #     turn(board)
 #   end
 # end
-# 
+#
 # def turn_count(board)
 #   counter=0
 #   board.each do |spaces|
@@ -61,11 +61,11 @@ end
 #   end
 #   counter
 # end
-# 
+#
 # def current_player(board)
 #   turn_count(board) % 2 == 0? "X" : "O"
 # end
-# 
+#
 # def won?(board)
 #   WIN_COMBINATIONS.each do |wincombo|
 #    if (board[wincombo[0]]) == "X" && (board[wincombo[1]]) == "X" && (board[wincombo[2]]) == "X"
@@ -76,31 +76,31 @@ end
 #   end
 #   false
 # end
-# 
+#
 # def full?(board)
 #   board.all? {|i| i == "X" || i == "O"}
 #   end
-# 
+#
 # def draw?(board)
 #   if !won?(board) && full?(board)
 #     return true
 #   end
 #   false
 # end
-# 
+#
 # def over?(board)
 #   if won?(board) || full?(board) || draw?(board)
 #     return true
 #   end
 # end
-# 
+#
 # def winner(board)
 #   if won?(board)
 #     return board[won?(board)[0]]
 #   end
 # end
-# 
-# 
+#
+#
 # def play(board)
 #    until over?(board)
 #       turn(board)
