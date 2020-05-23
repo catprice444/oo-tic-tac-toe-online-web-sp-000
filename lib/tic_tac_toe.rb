@@ -50,9 +50,9 @@ def turn
   end
 end
 
-def turn_count(board)
+def turn_count
   counter=0
-  board.each do |spaces|
+  @board.each do |spaces|
     if spaces == "X" || spaces == "O"
     counter +=1
   end
@@ -60,23 +60,23 @@ def turn_count(board)
   counter
 end
 
-def current_player(board)
-  turn_count(board) % 2 == 0? "X" : "O"
+def current_player
+  turn_count(@board) % 2 == 0? "X" : "O"
 end
 
-def won?(board)
+def won?
   WIN_COMBINATIONS.each do |wincombo|
-   if (board[wincombo[0]]) == "X" && (board[wincombo[1]]) == "X" && (board[wincombo[2]]) == "X"
+   if (@board[wincombo[0]]) == "X" && (@board[wincombo[1]]) == "X" && (@board[wincombo[2]]) == "X"
      return wincombo
-    elsif (board[wincombo[0]]) == "O" && (board[wincombo[1]]) == "O" && (board[wincombo[2]]) == "O"
+   elsif (@board[wincombo[0]]) == "O" && (@board[wincombo[1]]) == "O" && (@board[wincombo[2]]) == "O"
       return wincombo
     end
   end
   false
 end
 
-def full?(board)
-  board.all? {|i| i == "X" || i == "O"}
+def full?
+  @board.all? {|i| i == "X" || i == "O"}
   end
 
 def draw?(board)
