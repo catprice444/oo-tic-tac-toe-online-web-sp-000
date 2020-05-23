@@ -61,7 +61,7 @@ def turn_count
 end
 
 def current_player
-  turn_count(@board) % 2 == 0? "X" : "O"
+  turn_count % 2 == 0? "X" : "O"
 end
 
 def won?
@@ -80,7 +80,7 @@ def full?
   end
 
 def draw?
-  if !won?(@board) && full?(@board)
+  if !won? && full?
     return true
   end
   false
