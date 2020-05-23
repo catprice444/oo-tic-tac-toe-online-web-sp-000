@@ -30,8 +30,8 @@ def move(index, token = "X")
   @board[index] = token
 end
 
-def position_taken?(board, location)
-  board[location] != " " && board[location] != ""
+def position_taken?(index)
+  @board[index] != " " && @board[index] != ""
 end
 
 def valid_move?(board, index)
