@@ -79,29 +79,29 @@ def full?
   @board.all? {|i| i == "X" || i == "O"}
   end
 
-def draw?(board)
-  if !won?(board) && full?(board)
+def draw?
+  if !won?(@board) && full?(@board)
     return true
   end
   false
 end
 
-def over?(board)
-  if won?(board) || full?(board) || draw?(board)
+def over?
+  if won? || full? || draw?
     return true
   end
 end
 
-def winner(board)
-  if won?(board)
-    return board[won?(board)[0]]
+def winner
+  if won?
+    return @board[won?(@board)[0]]
   end
 end
 
 
-def play(board)
-   until over?(board)
-      turn(board)
+def play
+   until over?
+      turn(@board)
    end
    if won?(board)
       winner(board) == "X" || winner(board) == "O"
