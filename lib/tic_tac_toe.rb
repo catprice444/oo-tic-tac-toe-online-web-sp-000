@@ -101,7 +101,7 @@ end
 
 def play
    until over?
-      turn(@board)
+      turn
    end
    if won?(board)
       winner(board) == "X" || winner(board) == "O"
