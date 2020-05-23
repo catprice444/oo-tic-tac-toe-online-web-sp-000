@@ -13,7 +13,7 @@ class TicTacToe
       [1,4,7],
       [2,5,8]
     ]
-  
+
 end
 
 def display_board(board)
@@ -112,4 +112,3 @@ def play(board)
       puts "Cat's Game!"
    end
 end
-
